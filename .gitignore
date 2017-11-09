@@ -1,2 +1,4 @@
 # ignore binary files
 DevOps_Binary/
+configuration_vars.yml
+

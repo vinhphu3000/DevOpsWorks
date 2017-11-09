@@ -2,11 +2,11 @@
 - hosts: 127.0.0.1
   connection: local
   gather_facts: no
-  sudo: yes
+  become: yes
 
   tasks:
     - name: Setting up AWS Credential for Terraform to work on
-      shell: echo "Setting up AWS Credential for Terraform to work on"
+      shell: echo "AWS access key: $AWS_ACCESS_KEY_ID"
       environment:
         AWS_ACCESS_KEY_ID: AKIAJ5LODIDVU3LZPPLA
       register: shellout

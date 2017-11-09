@@ -1,2 +1,17 @@
 ---
-# tasks file for get_variables_from_git
+- name: Check out {{ GIT_REPO }} version {{ GIT_VERSION }} to {{ GIT_SOURCE_FOLDER }}
+  git:
+    repo: {{ GIT_REPO }}
+    version: "{{ GIT_VERSION }}"
+    dest: "{{ GIT_SOURCE_FOLDER }}"
+
+- name: Make sure file {{ GIT_VARIABLE_FILE }} removed before copying in new one!
+  file:
+    dest: "{{ GIT_LOCAL_VARIABLE_FOLDER }}/{{ GIT_VARIABLE_FILE }}"
+    state: absent
+
+- name: Copy variable file {{ GIT_VARIABLE_FILE }} to {{ GIT_LOCAL_VARIABLE_FOLDER }}
+  file:
+    src: "{{ GIT_SOURCE_FOLDER }}/{{ GIT_VARIABLE_FILE }}"
+    dest: "{{ GIT_LOCAL_VARIABLE_FOLDER }}"
+    state: link

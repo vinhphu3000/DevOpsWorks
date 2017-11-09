@@ -8,6 +8,7 @@
   - vars.yml
 
   roles:
+    - get_variables_from_git
     - setup_aws_key
 
   tasks:

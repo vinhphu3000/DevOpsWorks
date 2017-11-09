@@ -1,7 +1,7 @@
 ---
 - name: Check out {{ GIT_REPO }} version {{ GIT_VERSION }} to {{ GIT_SOURCE_FOLDER }}
   git:
-    repo: {{ GIT_REPO }}
+    repo: "{{ GIT_REPO }}"
     version: "{{ GIT_VERSION }}"
     dest: "{{ GIT_SOURCE_FOLDER }}"
 

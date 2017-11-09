@@ -1,2 +1,13 @@
 ---
+- name: Add AWS Access Key Id to .bash_profile for Terraform to work on
+  lineinfile: dest=~/.bash_profile regexp=^AWS_ACCESS_KEY_ID= line=AWS_ACCESS_KEY_ID={{ AWS_ACCESS_KEY_ID }}
 
+- name: Add AWS Secret Access Key to .bash_profile for Terraform to work on
+  lineinfile: dest=~/.bash_profile regexp=^AWS_SECRET_ACCESS_KEY= line=AWS_SECRET_ACCESS_KEY={{ AWS_SECRET_ACCESS_KEY }}
+
+- name: Set up AWS Access Key environment variables for Terraform to work on
+  shell: 'source ~/.bash_profile && echo AWS Access Key Id $AWS_ACCESS_KEY_ID && echo AWS Secret Access Key $AWS_SECRET_ACCESS_KEY'
+  register: AWS_Key_Info
+
+- name: Print the values of AWS Key Info
+  debug: msg="The variable is {{ AWS_Key_Info }}"

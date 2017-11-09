@@ -1,9 +1,14 @@
 ---
+- name: Create temporary Git folder
+  file:
+    src: "{{ GIT_SOURCE_FOLDER }}/git"
+    state: directory
+
 - name: Check out {{ GIT_REPO }} version {{ GIT_VERSION }} to {{ GIT_SOURCE_FOLDER }}
   git:
     repo: "{{ GIT_REPO }}"
     version: "{{ GIT_VERSION }}"
-    dest: "{{ GIT_SOURCE_FOLDER }}"
+    dest: "{{ GIT_SOURCE_FOLDER }}/git"
 
 - name: Make sure file {{ GIT_VARIABLE_FILE }} removed before copying in new one!
   file:
@@ -11,7 +16,7 @@
     state: absent
 
 - name: Copy variable file {{ GIT_VARIABLE_FILE }} to {{ GIT_LOCAL_VARIABLE_FOLDER }}
-  shell: "cp {{ GIT_SOURCE_FOLDER }}/{{ GIT_VARIABLE_FILE }} {{ GIT_LOCAL_VARIABLE_FOLDER }}/{{ GIT_VARIABLE_FILE }}"
+  shell: "cp {{ GIT_SOURCE_FOLDER }}/git/{{ GIT_VARIABLE_FILE }} {{ GIT_LOCAL_VARIABLE_FOLDER }}/{{ GIT_VARIABLE_FILE }}"
 
 - name: Delete temporary working directory
-  shell: "rm -Rf {{ GIT_SOURCE_FOLDER }} && mkdir temp"
+  shell: "rm -Rf {{ GIT_SOURCE_FOLDER }}/git"

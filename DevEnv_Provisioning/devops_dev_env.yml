@@ -2,10 +2,14 @@
 - hosts: 127.0.0.1
   connection: local
   gather_facts: no
+  sudo: yes
 
   tasks:
+  - name: Setting up AWS Credential for Terraform to work on
+    environment:
+      AWS_ACCESS_KEY_ID: AKIAJ5LODIDVU3LZPPLA
+    register: shellout
 
-  - name: Test local
-    command: date
+  - debug: var=shellout
 
 

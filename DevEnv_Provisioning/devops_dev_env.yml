@@ -4,8 +4,8 @@
   gather_facts: no
 
   tasks:
-  
-	- name: Test local
-	  command: date
+
+  - name: Test local
+    command: date
 
 

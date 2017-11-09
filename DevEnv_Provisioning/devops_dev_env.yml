@@ -6,6 +6,7 @@
 
   tasks:
     - name: Setting up AWS Credential for Terraform to work on
+      shell: echo "Setting up AWS Credential for Terraform to work on"
       environment:
         AWS_ACCESS_KEY_ID: AKIAJ5LODIDVU3LZPPLA
       register: shellout

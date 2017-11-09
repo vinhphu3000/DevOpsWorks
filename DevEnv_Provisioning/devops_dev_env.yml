@@ -4,6 +4,9 @@
   gather_facts: no
   become: yes
 
+  vars_files:
+  - vars.yml
+
   roles:
     - setup_aws_key
 

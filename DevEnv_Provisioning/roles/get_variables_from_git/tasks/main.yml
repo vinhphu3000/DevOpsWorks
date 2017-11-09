@@ -13,5 +13,5 @@
 - name: Copy variable file {{ GIT_VARIABLE_FILE }} to {{ GIT_LOCAL_VARIABLE_FOLDER }}
   file:
     src: "{{ GIT_SOURCE_FOLDER }}/{{ GIT_VARIABLE_FILE }}"
-    dest: "{{ GIT_LOCAL_VARIABLE_FOLDER }}"
+    dest: "{{ GIT_LOCAL_VARIABLE_FOLDER }}/{{ GIT_VARIABLE_FILE }}"
     state: link

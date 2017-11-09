@@ -1,7 +1,7 @@
 ---
 - name: Create temporary Git folder
   file:
-    src: "{{ GIT_SOURCE_FOLDER }}/git"
+    path: "{{ GIT_SOURCE_FOLDER }}/git"
     state: directory
 
 - name: Check out {{ GIT_REPO }} version {{ GIT_VERSION }} to {{ GIT_SOURCE_FOLDER }}

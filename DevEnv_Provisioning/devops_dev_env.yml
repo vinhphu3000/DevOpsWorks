@@ -5,11 +5,11 @@
   sudo: yes
 
   tasks:
-  - name: Setting up AWS Credential for Terraform to work on
-    environment:
-      AWS_ACCESS_KEY_ID: AKIAJ5LODIDVU3LZPPLA
-    register: shellout
+    - name: Setting up AWS Credential for Terraform to work on
+      environment:
+        AWS_ACCESS_KEY_ID: AKIAJ5LODIDVU3LZPPLA
+      register: shellout
 
-  - debug: var=shellout
+    - debug: var=shellout
 
 

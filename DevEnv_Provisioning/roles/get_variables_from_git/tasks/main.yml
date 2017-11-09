@@ -11,7 +11,7 @@
     state: absent
 
 - name: Copy variable file {{ GIT_VARIABLE_FILE }} to {{ GIT_LOCAL_VARIABLE_FOLDER }}
-  file:
-    src: "{{ GIT_SOURCE_FOLDER }}/{{ GIT_VARIABLE_FILE }}"
-    dest: "{{ GIT_LOCAL_VARIABLE_FOLDER }}/{{ GIT_VARIABLE_FILE }}"
-    state: link
+  shell: "cp {{ GIT_SOURCE_FOLDER }}/{{ GIT_VARIABLE_FILE }} {{ GIT_LOCAL_VARIABLE_FOLDER }}/{{ GIT_VARIABLE_FILE }}"
+
+- name: Delete temporary working directory
+  shell: "rm -Rf {{ GIT_SOURCE_FOLDER }} && mkdir temp"

@@ -21,4 +21,4 @@
       "ssh_username": "ubuntu",
       "ami_name": "packer-example {{timestamp}}"
     }]
-  }
+}

@@ -1,4 +1,10 @@
 ---
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  become: yes
+
+
 - name: Create root working folder
   file:
     path: "{{ FOLDER_STRUCTURE_GIT_DEST }}/DevOpsWorks/"

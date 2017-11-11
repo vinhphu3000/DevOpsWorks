@@ -31,5 +31,11 @@
     "tags": {
       "{{user `resource_tag_name`}}": "{{user `resource_tag_value`}}"
     }
+  }],
+
+  "provisioners": [{
+    "type": "ansible",
+    "playbook_file": "./roles/packer/tasks/main.yml",
+    "user": "ec2-user"
   }]
 }

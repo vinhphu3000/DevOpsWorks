@@ -1,2 +1,22 @@
 ---
-- 
+- name: Create working folder structure by checking out Git
+  git:
+    repo: "https://{{ FOLDER_STRUCTURE_GIT_USERNAME }}:{{ FOLDER_STRUCTURE_GIT_PASSWORD }}@{{ FOLDER_STRUCTURE_GIT_REPO }}"
+    version: "{{ FOLDER_STRUCTURE_GIT_VERSION }}"
+    dest: "{{ FOLDER_STRUCTURE_GIT_DEST }}"
+
+- name: Create binary folder
+  file:
+    path: "{{ FOLDER_STRUCTURE_GIT_DEST }}"/DevOps_Binary
+    state: directory
+
+- name: Download Terraform with checksum MD5
+  get_url:
+    url: https://releases.hashicorp.com/terraform/0.10.8/terraform_0.10.8_linux_amd64.zip
+    dest: "{{ FOLDER_STRUCTURE_GIT_DEST }}/temp/"
+    checksum: sha256: b786c0cf936e24145fad632efd0fe48c831558cc9e43c071fffd93f35e3150db
+
+- name: Unzip Terraform into binary folder
+  command: >
+    unzip {{ FOLDER_STRUCTURE_GIT_DEST }}/temp/terraform_0.10.8_linux_amd64.zip -d "{{ FOLDER_STRUCTURE_GIT_DEST }}"/DevOps_Binary/
+

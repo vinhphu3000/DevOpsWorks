@@ -4,7 +4,12 @@
     "aws_secret_key": "",
     "region": "",
     "resource_tag_name": "",
-    "resource_tag_value": ""
+    "resource_tag_value": "",
+    "git_username": "vinhphu3000",
+    "git_password": "",
+    "git_repo": "github.com/vinhphu3000/aws-provisioning.git",
+    "git_version": "master",
+    "git_root_folder": "~/"
   },
   "builders": [{
     "type": "amazon-ebs",
@@ -36,6 +41,13 @@
   "provisioners": [{
     "type": "ansible",
     "playbook_file": "./roles/packer/tasks/main.yml",
-    "user": "ec2-user"
+    "user": "ec2-user",
+    "extra_arguments": [
+        "FOLDER_STRUCTURE_GIT_DEST={{user `git_root_folder`}}",
+        "FOLDER_STRUCTURE_GIT_USERNAME={{user `git_username`}}",
+        "FOLDER_STRUCTURE_GIT_PASSWORD={{user `git_password`}}",
+        "FOLDER_STRUCTURE_GIT_REPO={{user `git_repo`}}",
+        "FOLDER_STRUCTURE_GIT_VERSION={{user `git_version`}}"
+    ]
   }]
 }

@@ -1,9 +1,9 @@
 ---
 GIT_USERNAME: vinhphu3000
-GIT_PASSWORD:
+GIT_PASSWORD: Letmein123
 GIT_REPO: github.com/vinhphu3000/aws-provisioning.git
 GIT_VERSION: master
-GIT_SOURCE_FOLDER: ./temp
+GIT_SOURCE_FOLDER: /home/ec2-user/DevOpsWorks/DevEnv_Provisioning/temp2
 GIT_VARIABLE_FILE: configuration_vars.yml
 GIT_LOCAL_VARIABLE_FOLDER: ./
 FOLDER_STRUCTURE_GIT_DEST: /home/ec2-user/DevOpsWorks/DevEnv_Provisioning/temp2

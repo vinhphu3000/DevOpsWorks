@@ -38,16 +38,25 @@
     }
   }],
 
-  "provisioners": [{
-    "type": "ansible",
-    "playbook_file": "./roles/packer/tasks/main.yml",
-    "user": "ec2-user",
-    "extra_arguments": [
+  "provisioners": [
+    {
+      "type": "shell",
+      "inline":[
+        "ls -al",
+        "pwd"
+      ]
+    },
+    {
+      "type": "ansible",
+      "playbook_file": "./roles/packer/tasks/main.yml",
+      "user": "ec2-user",
+      "extra_arguments": [
         "FOLDER_STRUCTURE_GIT_DEST={{user `git_root_folder`}}",
         "FOLDER_STRUCTURE_GIT_USERNAME={{user `git_username`}}",
         "FOLDER_STRUCTURE_GIT_PASSWORD={{user `git_password`}}",
         "FOLDER_STRUCTURE_GIT_REPO={{user `git_repo`}}",
         "FOLDER_STRUCTURE_GIT_VERSION={{user `git_version`}}"
-    ]
-  }]
+      ]
+    }
+  ]
 }

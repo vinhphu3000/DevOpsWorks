@@ -15,6 +15,11 @@
     path: "{{ FOLDER_STRUCTURE_GIT_DEST }}/DevOpsWorks/DevOps_Binary"
     state: directory
 
+- name: Create temporary folder
+  file:
+    path: "{{ FOLDER_STRUCTURE_GIT_DEST }}/DevOpsWorks/DevEnv_Provisioning/temp"
+    state: directory
+
 - name: Download Terraform with checksum MD5
   get_url:
     url: https://releases.hashicorp.com/terraform/0.10.8/terraform_0.10.8_linux_amd64.zip

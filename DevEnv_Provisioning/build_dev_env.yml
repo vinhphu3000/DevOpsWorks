@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  become: yes
+
+  roles:
+    - packer
+
+  tasks:
+

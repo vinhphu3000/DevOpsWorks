@@ -5,7 +5,7 @@
   become: yes
 
   vars_files:
-  - vars.yml
+  - test_vars.yml
   - configuration_vars.yml
 
   roles:

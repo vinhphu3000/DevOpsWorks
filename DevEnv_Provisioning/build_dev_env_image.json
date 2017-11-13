@@ -51,6 +51,7 @@
       "playbook_file": "./roles/packer/tasks/main.yml",
       "user": "ec2-user",
       "extra_arguments": [
+        "--extra-vars",
         "FOLDER_STRUCTURE_GIT_DEST={{user `git_root_folder`}}",
         "FOLDER_STRUCTURE_GIT_USERNAME={{user `git_username`}}",
         "FOLDER_STRUCTURE_GIT_PASSWORD={{user `git_password`}}",

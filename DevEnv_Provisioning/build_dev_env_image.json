@@ -51,6 +51,7 @@
       "playbook_file": "./build_dev_env.yml",
       "user": "ec2-user",
       "extra_arguments": [
+        "-vvvv",
         "--extra-vars", "FOLDER_STRUCTURE_GIT_DEST={{user `git_root_folder`}} FOLDER_STRUCTURE_GIT_USERNAME={{user `git_username`}} FOLDER_STRUCTURE_GIT_PASSWORD={{user `git_password`}}",
         "--extra-vars", "FOLDER_STRUCTURE_GIT_REPO={{user `git_repo`}} FOLDER_STRUCTURE_GIT_VERSION={{user `git_version`}}"
       ]

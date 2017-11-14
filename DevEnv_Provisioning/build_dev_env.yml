@@ -1,10 +1,16 @@
 ---
-- hosts: localhost
+- hosts: all
   become: yes
   remote_user: ec2-user
   gather_facts: no
 
   tasks:
+  - name: Install latest OS updates
+    command: yum -y update
+
+  - name: Install Git
+    yum: name=git state=present
+
   - name: Create root working folder
     file:
       path: "{{ FOLDER_STRUCTURE_GIT_DEST }}/DevOpsWorks/"

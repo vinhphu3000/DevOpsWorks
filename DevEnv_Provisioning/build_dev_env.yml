@@ -24,12 +24,12 @@
 
   - name: Create binary folder
     file:
-      path: "{{ FOLDER_STRUCTURE_GIT_DEST }}/DevOpsWorks/DevOps_Binary"
+      path: "{{ FOLDER_STRUCTURE_GIT_DEST }}/DevOpsWorks/DevOps_Binary/"
       state: directory
 
   - name: Create temporary folder
     file:
-      path: "{{ FOLDER_STRUCTURE_GIT_DEST }}/DevOpsWorks/DevEnv_Provisioning/temp"
+      path: "{{ FOLDER_STRUCTURE_GIT_DEST }}/DevOpsWorks/DevEnv_Provisioning/temp/"
       state: directory
 
   - name: Download Terraform with checksum MD5
@@ -39,7 +39,10 @@
       sha256sum: b786c0cf936e24145fad632efd0fe48c831558cc9e43c071fffd93f35e3150db
 
   - name: Print debug info - content inside folder Binary
-    command: "ls -al {{ FOLDER_STRUCTURE_GIT_DEST }}/DevOpsWorks/DevOps_Binary"
+    command: "ls -al {{ FOLDER_STRUCTURE_GIT_DEST }}/DevOpsWorks/DevOps_Binary/"
 
   - name: Unzip Terraform into binary folder
     command: "unzip {{ FOLDER_STRUCTURE_GIT_DEST }}/DevOpsWorks/DevEnv_Provisioning/temp/terraform_0.10.8_linux_amd64.zip -d {{ FOLDER_STRUCTURE_GIT_DEST }}/DevOpsWorks/DevOps_Binary/"
+
+  - name: Print debug info - content inside folder Binary
+    command: "ls -al {{ FOLDER_STRUCTURE_GIT_DEST }}/DevOpsWorks/DevOps_Binary/"

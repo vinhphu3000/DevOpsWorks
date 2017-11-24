@@ -1,19 +1,6 @@
-# Configure Terragrunt to use DynamoDB for locking
-lock = {
-  backend = "dynamodb"
-  config {
-    state_file_id = "phuha_dev_env_lock_table"
-  }
-}
-
-# Configure Terragrunt to automatically store tfstate files in S3
-remote_state = {
-  backend = "s3"
-  config {
-    encrypt = "true"
-    bucket = "phuha_dev_env_terraform_state"
-    key = "terraform.tfstate"
-    region = "ap-southeast-1"
+terragrunt = {
+  include {
+    path = "${find_in_parent_folders()}"
   }
 }
 

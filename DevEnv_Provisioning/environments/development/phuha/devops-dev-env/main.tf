@@ -1,5 +1,9 @@
+terraform {
+  backend "s3" {}
+}
+
 module "devops_dev_env" {
-  source = "../../../../framework/devops-dev-env"
+  source = "../../../..//framework/devops-dev-env"
 
   aws_region                    = "${var.aws_region}"
   ami_id                        = "${var.ami_id}"

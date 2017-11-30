@@ -1,0 +1,40 @@
+CORE-utilities:   TEMP:/Users/phuha/DevOpsWorks/DevEnv_Provisioning/temp
+CORE-utilities:   PARAM_MODULE_HOME:/Users/phuha/DevOpsWorks/DevEnv_Provisioning/core/aws-ami-packaging
+CORE-utilities:   PARAM_MODULE_VARIABLES_FILE:/Users/phuha/DevOpsWorks/DevEnv_Provisioning/core/aws-ami-packaging/variables.json
+CORE-utilities:   PARAM_MODULE_TEMP_VARIABLE_FILE:/Users/phuha/DevOpsWorks/DevEnv_Provisioning/temp/CORE_MODULE_AWS_AMI_PACKAGING-variables.20171130124458.json
+CORE-utilities:   cp "/Users/phuha/DevOpsWorks/DevEnv_Provisioning/core/aws-ami-packaging/variables.json" "/Users/phuha/DevOpsWorks/DevEnv_Provisioning/temp/CORE_MODULE_AWS_AMI_PACKAGING-variables.20171130124458.json"
+CORE-utilities:   TEMP:/Users/phuha/DevOpsWorks/DevEnv_Provisioning/temp
+CORE-utilities:   PARAM_MODULE_HOME:/Users/phuha/DevOpsWorks/DevEnv_Provisioning/core/aws-ami-packaging
+CORE-utilities:   PARAM_MODULE_VARIABLES_FILE:/Users/phuha/DevOpsWorks/DevEnv_Provisioning/core/aws-ami-packaging/variables.json
+CORE-utilities:   Get temp variables file
+FRAMEWORK-devops-dev-env:   CORE_MODULE_AWS_AMI_PACKAGING_TEMP_VARIABLES_FILE:/Users/phuha/DevOpsWorks/DevEnv_Provisioning/temp/CORE_MODULE_AWS_AMI_PACKAGING-variables.20171130124458.json
+CORE-utilities:   TEMP:/Users/phuha/DevOpsWorks/DevEnv_Provisioning/temp
+CORE-utilities:   PARAM_MODULE_HOME:/Users/phuha/DevOpsWorks/DevEnv_Provisioning/core/aws-ami-packaging
+CORE-utilities:   PARAM_MODULE_VARIABLES_FILE:/Users/phuha/DevOpsWorks/DevEnv_Provisioning/core/aws-ami-packaging/variables.json
+CORE-utilities:   PARAM_MODULE_TEMP_VARIABLE_FILE:/Users/phuha/DevOpsWorks/DevEnv_Provisioning/temp/CORE_MODULE_AWS_AMI_PACKAGING-variables.20171130125027.json
+CORE-utilities:   cp "/Users/phuha/DevOpsWorks/DevEnv_Provisioning/core/aws-ami-packaging/variables.json" "/Users/phuha/DevOpsWorks/DevEnv_Provisioning/temp/CORE_MODULE_AWS_AMI_PACKAGING-variables.20171130125027.json"
+CORE-utilities:   TEMP:/Users/phuha/DevOpsWorks/DevEnv_Provisioning/temp
+CORE-utilities:   PARAM_MODULE_HOME:/Users/phuha/DevOpsWorks/DevEnv_Provisioning/core/aws-ami-packaging
+CORE-utilities:   PARAM_MODULE_VARIABLES_FILE:/Users/phuha/DevOpsWorks/DevEnv_Provisioning/core/aws-ami-packaging/variables.json
+CORE-utilities:   Get temp variables file
+FRAMEWORK-devops-dev-env:   CORE_MODULE_AWS_AMI_PACKAGING_TEMP_VARIABLES_FILE:/Users/phuha/DevOpsWorks/DevEnv_Provisioning/temp/CORE_MODULE_AWS_AMI_PACKAGING-variables.20171130125027.json
+CORE-utilities:   TEMP:/Users/phuha/DevOpsWorks/DevEnv_Provisioning/temp
+CORE-utilities:   PARAM_MODULE_HOME:/Users/phuha/DevOpsWorks/DevEnv_Provisioning/core/aws-ami-packaging
+CORE-utilities:   PARAM_MODULE_VARIABLES_FILE:/Users/phuha/DevOpsWorks/DevEnv_Provisioning/core/aws-ami-packaging/variables.json
+CORE-utilities:   PARAM_MODULE_TEMP_VARIABLE_FILE:/Users/phuha/DevOpsWorks/DevEnv_Provisioning/temp/CORE_MODULE_AWS_AMI_PACKAGING-variables.20171130125453.json
+CORE-utilities:   cp "/Users/phuha/DevOpsWorks/DevEnv_Provisioning/core/aws-ami-packaging/variables.json" "/Users/phuha/DevOpsWorks/DevEnv_Provisioning/temp/CORE_MODULE_AWS_AMI_PACKAGING-variables.20171130125453.json"
+CORE-utilities:   TEMP:/Users/phuha/DevOpsWorks/DevEnv_Provisioning/temp
+CORE-utilities:   PARAM_MODULE_HOME:/Users/phuha/DevOpsWorks/DevEnv_Provisioning/core/aws-ami-packaging
+CORE-utilities:   PARAM_MODULE_VARIABLES_FILE:/Users/phuha/DevOpsWorks/DevEnv_Provisioning/core/aws-ami-packaging/variables.json
+CORE-utilities:   Get temp variables file
+FRAMEWORK-devops-dev-env:   CORE_MODULE_AWS_AMI_PACKAGING_TEMP_VARIABLES_FILE:/Users/phuha/DevOpsWorks/DevEnv_Provisioning/temp/CORE_MODULE_AWS_AMI_PACKAGING-variables.20171130125453.json
+CORE-utilities:   TEMP:/Users/phuha/DevOpsWorks/DevEnv_Provisioning/temp
+CORE-utilities:   PARAM_MODULE_HOME:/Users/phuha/DevOpsWorks/DevEnv_Provisioning/core/aws-ami-packaging
+CORE-utilities:   PARAM_MODULE_VARIABLES_FILE:/Users/phuha/DevOpsWorks/DevEnv_Provisioning/core/aws-ami-packaging/variables.json
+CORE-utilities:   PARAM_MODULE_TEMP_VARIABLE_FILE:/Users/phuha/DevOpsWorks/DevEnv_Provisioning/temp/CORE_MODULE_AWS_AMI_PACKAGING-variables.20171130125550.json
+CORE-utilities:   cp "/Users/phuha/DevOpsWorks/DevEnv_Provisioning/core/aws-ami-packaging/variables.json" "/Users/phuha/DevOpsWorks/DevEnv_Provisioning/temp/CORE_MODULE_AWS_AMI_PACKAGING-variables.20171130125550.json"
+CORE-utilities:   TEMP:/Users/phuha/DevOpsWorks/DevEnv_Provisioning/temp
+CORE-utilities:   PARAM_MODULE_HOME:/Users/phuha/DevOpsWorks/DevEnv_Provisioning/core/aws-ami-packaging
+CORE-utilities:   PARAM_MODULE_VARIABLES_FILE:/Users/phuha/DevOpsWorks/DevEnv_Provisioning/core/aws-ami-packaging/variables.json
+CORE-utilities:   Get temp variables file
+FRAMEWORK-devops-dev-env:   CORE_MODULE_AWS_AMI_PACKAGING_TEMP_VARIABLES_FILE:/Users/phuha/DevOpsWorks/DevEnv_Provisioning/temp/CORE_MODULE_AWS_AMI_PACKAGING-variables.20171130125550.json

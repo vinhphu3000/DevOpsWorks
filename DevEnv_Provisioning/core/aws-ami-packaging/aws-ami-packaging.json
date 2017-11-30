@@ -1,0 +1,82 @@
+{
+  "variables": {
+
+  },
+
+  "builders": [{
+    "type": "amazon-ebs",
+    "access_key": "{{user `aws_access_key`}}",
+    "secret_key": "{{user `aws_secret_key`}}",
+    "region": "{{user `region`}}",
+    "source_ami_filter": {
+      "filters": {
+        "virtualization-type": "hvm",
+        "name": "amzn-ami-hvm*x86_64-gp2",
+        "root-device-type": "ebs"
+      },
+      "owners": ["137112412989"],
+      "most_recent": true
+    },
+    "instance_type": "{{user `instance_type`}}",
+    "ssh_username": "ec2-user",
+    "ami_name": "{{user `ami_name`}}",
+    "ami_description": "{{user `ami_description`}}",
+    "ebs_optimized": false,
+    "force_deregister": true,
+    "force_delete_snapshot": true,
+    "shutdown_behavior": "terminate",
+    "tags": {
+      "{{user `resource_tag_key1`}}": "{{user `resource_tag_value1`}}",
+      "{{user `resource_tag_key2`}}": "{{user `resource_tag_value2`}}",
+      "{{user `resource_tag_key3`}}": "{{user `resource_tag_value3`}}",
+      "{{user `resource_tag_key4`}}": "{{user `resource_tag_value4`}}",
+      "{{user `resource_tag_key5`}}": "{{user `resource_tag_value5`}}",
+      "{{user `resource_tag_key6`}}": "{{user `resource_tag_value6`}}",
+      "{{user `resource_tag_key7`}}": "{{user `resource_tag_value7`}}",
+      "{{user `resource_tag_key8`}}": "{{user `resource_tag_value8`}}",
+      "{{user `resource_tag_key9`}}": "{{user `resource_tag_value9`}}",
+      "{{user `resource_tag_key10`}}": "{{user `resource_tag_value10`}}"
+    }
+  }],
+
+  "provisioners": [
+    {
+      "type": "file",
+      "source": "{{user `scripts_src_folder`}}",
+      "destination": "{{user `scripts_dest_folder`}}"
+    },
+    {
+      "type": "shell-local",
+      "inline": "if [ ! -z \"{{user `provisioner_pre_local_shell`}}\" ]; then provisioner_pre_local_shell; fi"
+    },
+    {
+      "type": "shell",
+      "inline": "if [ ! -z \"{{user `provisioner_pre_remote_shell`}}\" ]; then {{user `scripts_dest_folder`}}/provisioner_pre_remote_shell; fi"
+    },
+    {
+      "type": "ansible",
+      "playbook_file": "{{user `provisioner_ansible_playbook`}}",
+      "user": "ec2-user",
+      "extra_arguments": [
+        "--extra-vars", "{{user `provisioner_ansible_variables_file`}}",
+        "{{user `debug`}}"
+      ]
+    },
+    {
+      "type": "shell",
+      "inline": "if [ ! -z \"{{user `provisioner_post_remote_shell`}}\" ]; then {{user `scripts_dest_folder`}}/provisioner_post_remote_shell; fi"
+    },
+    {
+      "type": "shell-local",
+      "inline": "if [ ! -z \"{{user `provisioner_post_local_shell`}}\" ]; then provisioner_post_local_shell; fi"
+    }
+  ],
+
+  "post-processors": [
+    {
+      "type": "manifest",
+      "output": "{{user `post_processor_manifest_file`}}",
+      "strip_path": true
+    }
+  ]
+}
